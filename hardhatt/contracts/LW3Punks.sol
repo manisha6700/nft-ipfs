@@ -9,10 +9,10 @@ contract LW3Punks is ERC721Enumerable, Ownable {
     using Strings for uint256;
 
     string _baseTokenURI;
-    uint256 public _price = 0.01 ether;
+    uint256 public _price = 0.001 ether;
     bool public _paused;
-    uint public maxTokenIds = 10;
-    uint public tokenIds;
+    uint256 public maxTokenIds = 10;
+    uint256 public tokenIds;
 
     modifier onlyWhenNotPaused {
         require(!_paused, "Contract currently paused");
